@@ -59,7 +59,8 @@ public class GenerateFromExcel {
 		XSSFSheet sheet = workbook.getSheet(sheetName);
 
 		Date applicableDate = sheet.getRow(2).getCell(2).getDateCellValue();
-		String SBRNumber = sheet.getRow(4).getCell(2).getRawValue();
+		String SBRNumber = sheet.getRow(4).getCell(2).getStringCellValue();
+
 		double amount = sheet.getRow(5).getCell(2).getNumericCellValue();
 		Date paymentDate = sheet.getRow(6).getCell(2).getDateCellValue();
 
